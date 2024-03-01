@@ -12,6 +12,7 @@ This project was created to verify if:
 
 - Laravel 10.x (php 8.1)
 - [`composer: beyondcode/laravel-websockets`](https://github.com/beyondcode/laravel-websockets)
+- [`composer: pusher/pusher-php-server`]()
 - [`npm: laravel-echo`](https://www.npmjs.com/package/laravel-echo)
 - [`npm: socket.io`](https://www.npmjs.com/package/socket.io)
 
@@ -35,6 +36,18 @@ sail up -d
 sail npm install
 ```
 
+## Usage
+
+1. `sail npm run dev` -> launch the client (where messages/notifications are received)
+2. `sail artisan chat:public-message` -> send public messages to any client listening
+
+## Server configuration
+
+- [**nginx**](https://docs.soketi.app/getting-started/backend-configuration/nginx-configuration)
+
+## Links
+
+- [Stackoverflow: laravel + authenticated pusher client](https://stackoverflow.com/questions/54966575/real-time-react-web-app-with-pusher-and-laravel)
 
 
 ### Credits

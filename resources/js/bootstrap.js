@@ -21,7 +21,7 @@ import Pusher from 'pusher-js';
 
 window.Pusher = Pusher;
 
-let laravelEcho = new Echo({
+window.Echo = new Echo({
                                broadcaster      : 'pusher',
                                key              : import.meta.env.VITE_PUSHER_APP_KEY,
                                cluster          : import.meta.env.VITE_PUSHER_APP_CLUSTER ?? 'mt1',
@@ -30,14 +30,19 @@ let laravelEcho = new Echo({
                                wssPort          : import.meta.env.VITE_PUSHER_PORT ?? 443,
                                forceTLS         : (import.meta.env.VITE_PUSHER_SCHEME ?? 'https') === 'https',
                                enabledTransports: [ 'ws', 'wss' ],
-
                                encrypted        : true,
                                disableStats     : true
                            });
 
-laravelEcho.private(`orders.${ orderId }`)
-           .listen('New', (e) => {
-               console.log(e.order);
-           });
 
-window.Echo = laravelEcho;
+window.Echo.channel('messages')
+      .listen('NewMessage', (event) => {
+          console.log('New message:', event.message);
+      });
+
+// const receiverId = 'set-with-user-ID';
+
+// window.Echo.private('private-chat.' + receiverId)
+//       .listen('NewPrivateMessageNotification', (event) => {
+//           console.log('New private message:', event.message);
+//       });
