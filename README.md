@@ -11,10 +11,9 @@ This project was created to verify if:
 ### Project dependencies
 
 - Laravel 10.x (php 8.1)
-- [`composer: beyondcode/laravel-websockets`](https://github.com/beyondcode/laravel-websockets)
-- [`composer: pusher/pusher-php-server`]()
+- [`composer: pusher/pusher-php-server`](https://packagist.org/packages/pusher/pusher-php-server)
 - [`npm: laravel-echo`](https://www.npmjs.com/package/laravel-echo)
-- [`npm: socket.io`](https://www.npmjs.com/package/socket.io)
+- [`npm: pusher-js`](https://www.npmjs.com/package/pusher-js)
 
 
 - [`composer: laravel/sail`](https://laravel.com/docs/10.x/sail) (optional) configure a ready-to-go environment
