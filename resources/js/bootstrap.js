@@ -40,6 +40,7 @@ window.Echo.channel('messages')
           console.log('New message:', event.message);
       });
 
+
 // const receiverId = 'set-with-user-ID';
 
 // window.Echo.private('private-chat.' + receiverId)

@@ -38,8 +38,9 @@ sail npm install
 
 ## Usage
 
-1. `sail npm run dev` -> launch the client (where messages/notifications are received)
-2. `sail artisan chat:public-message` -> send public messages to any client listening
+1. `sail npm run build` -> build client resources (where messages/notifications are received)
+2. Open your browser on http://localhost
+3. `sail artisan chat:public-message` -> send public messages to any subscribed client
 
 ## Server configuration
 
